@@ -9,6 +9,7 @@ Jocul se desfasoara pe o platforma unde jucatorul poate interactiona cu obiectel
 <br> Sistem de particule pentru realizarea efectelor speciale
 <br> Prefabs: Grenade(Tasta G)
 <br> Sunete: explozia grenadei
+<br> Oglindire
 <br> Perspectiva third person
 <br> Multiplayer(Host-ul apasa pe "Multiplayer", iar daca clientul vrea sa se alature va introduce adresa IP a host-ului si va apasa pe "client") ***trebuie sa fie pe acelasi LAN
 <br> Animatii
