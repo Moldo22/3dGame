@@ -10,6 +10,7 @@ public class Movement : NetworkBehaviour
     #endregion
 
     #region Inputs
+    private float offset = 0.3f;
     public float vitezaDeplasare = 5f;
     public float vitezaRotatie = 100f;
     public Rigidbody rb;
@@ -120,6 +121,9 @@ public class Movement : NetworkBehaviour
     {
         Movement_Animation();
         if (Input.GetKeyDown(KeyCode.G)) SpawnPrefabServerRpc();
+        Vector3 scale=transform.localScale;
+        if (Input.GetKeyDown(KeyCode.O)) transform.localScale=new Vector3(scale.x+offset,scale.y+offset,scale.z+offset);
+        if (Input.GetKeyDown(KeyCode.P)) transform.localScale = new Vector3(scale.x - offset, scale.y - offset, scale.z - offset);
     }
 
     void FixedUpdate()
