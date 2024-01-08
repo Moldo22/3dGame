@@ -3,7 +3,7 @@ Autor: Moldovan Alexandru-Gheorghe
 Jocul se desfasoara pe o platforma unde jucatorul poate interactiona cu obiectele de pe platforma. Scopul este de a demonstra functionalitatile, jocul fiind lipsit de poveste sau nivele 
 <br>***Functionalitati:
 <br> Controlarea caracterului
-<br> Scalabilitate: un offset pentru modificare(tasta O pentru marire si tasta P pentru scadere)
+<br> Scalabilitate: un offset pentru modificare(tasta O pentru marire si tasta P pentru micsorare)
 <br> Translatie: un checkpoint care duce playerul intr-o anumita locatie a hartii
 <br> Rotatie
 <br> Sistem de particule pentru realizarea efectelor speciale
