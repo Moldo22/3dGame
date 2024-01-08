@@ -3,9 +3,10 @@ Autor: Moldovan Alexandru-Gheorghe
 Jocul se desfasoara pe o platforma unde jucatorul poate interactiona cu obiectele de pe platforma. Scopul este de a demonstra functionalitatile, jocul fiind lipsit de poveste sau nivele 
 <br>***Functionalitati:
 <br> Controlarea caracterului
-<br> Scalabilitate: un offset pentru modificare(tasta O pentru marire si tasta P pentru micsorare)
+<br> Scalare: un offset pentru modificare(tasta O pentru marire si tasta P pentru micsorare)
 <br> Translatie: un checkpoint care duce playerul intr-o anumita locatie a hartii
 <br> Rotatie
+<br> Lumini
 <br> Sistem de particule pentru realizarea efectelor speciale
 <br> Prefabs: Grenade(Tasta G)
 <br> Sunete: explozia grenadei
@@ -25,7 +26,8 @@ Jocul se desfasoara pe o platforma unde jucatorul poate interactiona cu obiectel
 
 <br><br>
 <h1>Scena din joc</h1>
-<img src="https://github.com/Moldo22/3dGame/assets/115102799/96afb074-7345-4f87-849f-360fafcd2f41" width=300px>
+<img src="https://github.com/Moldo22/3dGame/assets/115102799/96afb074-7345-4f87-849f-360fafcd2f41" width=300px  height=200px>
+<img src="https://github.com/Moldo22/3dGame/assets/115102799/211feb27-c9d2-448c-ac42-2509ef181a80" width=300px>
 
 <br><br>
 <h1>Optimizarea si eficientizarea codului folosit pentru joc</h1>
