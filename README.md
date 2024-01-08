@@ -34,8 +34,4 @@ Jocul se desfasoara pe o platforma unde jucatorul poate interactiona cu obiectel
 <img src="https://github.com/Moldo22/3dGame/assets/115102799/d624d32f-84ab-4eb4-a7fe-762b0219677a" width=300px>
 <img src="https://github.com/Moldo22/3dGame/assets/115102799/d99c37f1-dde4-4429-b842-c5ad0e34b716" width=300px>
 
-<br><br>
-<h1>Meniu din alt proiect</h1>
-<img src="https://user-images.githubusercontent.com/115102799/205648109-d2e15d5f-4d06-4326-9576-a36199534349.PNG" width=400px height=200px>
-
 
