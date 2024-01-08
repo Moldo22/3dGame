@@ -1,3 +1,4 @@
+#region Libraries
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -9,10 +10,11 @@ using System.Net.Sockets;
 using TMPro;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport;
-
+#endregion
 
 public class Multiplayer : MonoBehaviour
 {
+    #region References
     [SerializeField] private NetworkManager nm;
     [SerializeField] private UnityTransport ut;
     [SerializeField] public TextMeshProUGUI t;
@@ -22,12 +24,9 @@ public class Multiplayer : MonoBehaviour
     [SerializeField] private Button b2;
     [SerializeField] private GameObject prefab;
     [SerializeField] private Canvas cvs;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    #endregion
+ 
+    #region IP
     public string GetLocalIPAddress()
     {
         var host = Dns.GetHostEntry(Dns.GetHostName());
@@ -40,7 +39,9 @@ public class Multiplayer : MonoBehaviour
         }
         return null;
     }
+    #endregion
 
+    #region Host&Client Connection
     public void CreateHost()
     {
         b1.gameObject.SetActive(false);
@@ -75,10 +76,12 @@ public class Multiplayer : MonoBehaviour
         input.gameObject.SetActive(false);
         NetworkManager.Singleton.StartClient();
     }
-    
-    // Update is called once per frame
+    #endregion
+
+    #region Handler
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C)) NetworkManager.Singleton.StartClient();
     }
+    #endregion
 }

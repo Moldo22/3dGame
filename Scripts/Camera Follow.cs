@@ -1,23 +1,21 @@
+#region Libraries
 using UnityEngine;
 using Unity.Netcode;
+#endregion
 
 public class CameraFollow : NetworkBehaviour
 {
+    #region Inputs
     public Transform target;
     public float distance = 5.0f;
     public float height = 2.0f;
     public float rotationSpeed = 5.0f;
     private GameObject ultimulPlayer;
-
     private float rotationX = 0.0f;
-
     public float verticalRotationLimit = 80.0f;
+    #endregion
 
-    void Update()
-    {
-       
-    }
-
+    #region Handler
     void LateUpdate()
     {
         if (ultimulPlayer == null)
@@ -48,6 +46,6 @@ public class CameraFollow : NetworkBehaviour
             transform.position = cameraPosition;
         }
     }
-
+    #endregion
 }
 

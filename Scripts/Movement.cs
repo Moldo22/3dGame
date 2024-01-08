@@ -1,9 +1,15 @@
+#region Libraries
 using UnityEngine;
 using Unity.Netcode;
+#endregion
 
 public class Movement : NetworkBehaviour
 {
+    #region References
     [SerializeField] public Animator anim;
+    #endregion
+
+    #region Inputs
     public float vitezaDeplasare = 5f;
     public float vitezaRotatie = 100f;
     public Rigidbody rb;
@@ -12,8 +18,9 @@ public class Movement : NetworkBehaviour
     private bool canJump = false;
     private Vector3 spawnPosition;
     private GameObject ultimulPlayer = null;
+    #endregion
 
-
+    #region Collision
     private void OnTriggerEnter(Collider other)
     {
 
@@ -30,7 +37,9 @@ public class Movement : NetworkBehaviour
     {
         canJump = false;
     }
+    #endregion
 
+    #region Init
     void Start()
     {
         teleportPOS = new Vector3(-3.60f, 7.60f, -4.15f);
@@ -42,7 +51,9 @@ public class Movement : NetworkBehaviour
             if (playerObjects.Length > 0) ultimulPlayer = playerObjects[playerObjects.Length - 1];
         }       
     }
+    #endregion
 
+    #region ServerSpawn
     [ServerRpc(RequireOwnership=false)]
     void SpawnPrefabServerRpc()
     {
@@ -57,28 +68,13 @@ public class Movement : NetworkBehaviour
             //if (networkObject!=null) NetworkManager.Singleton.Spawn(spawnedPrefab, networkObject.OwnerClientId);
         }
     }
+    #endregion
 
-
-void Update()
-    {
-        /* if (transform.position.y > 0)
-         {
-             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 0f, transform.rotation.eulerAngles.z);
-         }*/
-
-        
-        Movement_Animation();
-        if (Input.GetKeyDown(KeyCode.G)) SpawnPrefabServerRpc();
-        
-
-        
-    }
-
-    
+    #region Animation
     void Movement_Animation()
     {
         if (!IsOwner) return;
-        
+
 
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
@@ -117,10 +113,19 @@ void Update()
 
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D)) anim.SetBool("isMoving", false);
     }
+    #endregion
+
+    #region Handlers
+    void Update()
+    {
+        Movement_Animation();
+        if (Input.GetKeyDown(KeyCode.G)) SpawnPrefabServerRpc();
+    }
 
     void FixedUpdate()
     {
         anim.SetBool("isJumping", false);
     }
-    
+    #endregion
+
 }
